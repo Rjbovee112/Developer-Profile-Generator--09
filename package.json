@@ -18,6 +18,7 @@
   "homepage": "https://github.com/Rjbovee112/Developer-Profile-Generator--09#readme",
   "dependencies": {
     "axios": "^0.19.2",
-    "inquirer": "^7.0.4"
+    "inquirer": "^7.0.4",
+    "util": "^0.12.2"
   }
 }
