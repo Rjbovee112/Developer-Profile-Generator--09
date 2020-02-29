@@ -1,3 +1,4 @@
+
 const colors = {
   green: {
     wrapperBackground: "#E6E1C3",
@@ -52,7 +53,7 @@ function generateHTML(data) {
          height: 100%;
          }
          .wrapper {
-         background-color: ${colors[data.color].wrapperBackground};
+         background-color: ${colors[data[12]].wrapperBackground};
          padding-top: 100px;
          }
          body {
@@ -94,8 +95,8 @@ function generateHTML(data) {
          display: flex;
          justify-content: center;
          flex-wrap: wrap;
-         background-color: ${colors[data.color].headerBackground};
-         color: ${colors[data.color].headerColor};
+         background-color: ${colors[data[12]].headerBackground};
+         color: ${colors[data[12]].headerColor};
          padding: 10px;
          width: 95%;
          border-radius: 6px;
@@ -106,7 +107,7 @@ function generateHTML(data) {
          border-radius: 50%;
          object-fit: cover;
          margin-top: -75px;
-         border: 6px solid ${colors[data.color].photoBorderColor};
+         border: 6px solid ${colors[data[12]].photoBorderColor};
          box-shadow: rgba(0, 0, 0, 0.3) 4px 1px 20px 4px;
          }
          .photo-header h1, .photo-header h2 {
@@ -133,11 +134,11 @@ function generateHTML(data) {
          margin-top: 10px;
          }
          .container {
+         margin-top: 90px;
          padding: 50px;
          padding-left: 100px;
          padding-right: 100px;
          }
-
          .row {
            display: flex;
            flex-wrap: wrap;
@@ -145,12 +146,11 @@ function generateHTML(data) {
            margin-top: 20px;
            margin-bottom: 20px;
          }
-
          .card {
            padding: 20px;
            border-radius: 6px;
-           background-color: ${colors[data.color].headerBackground};
-           color: ${colors[data.color].headerColor};
+           background-color: ${colors[data[12]].headerBackground};
+           color: ${colors[data[12]].headerColor};
            margin: 20px;
          }
          
@@ -158,17 +158,60 @@ function generateHTML(data) {
          flex: 1;
          text-align: center;
          }
-
          a, a:hover {
          text-decoration: none;
          color: inherit;
          font-weight: bold;
          }
-
          @media print { 
           body { 
             zoom: .75; 
           } 
          }
-      </style>`
-        }
+      </style>
+      </head>
+        <body>
+        
+        <div class="wrapper">
+            <div class="photo-header">
+                <img src="${data[0]}" alt="user image">
+                <h1>Hi!</h1>
+                <h2>My name is ${data[1]}</h2>
+                <div class="links-nav">
+                    <a class="nav-link" href="${data[3]}"><span><i
+                                class="fas fa-location-arrow"></i></span> ${data[4]}</a>
+                    <a class="nav-link" href="${data[5]}"><span><i class="fab fa-github"></i></span> GitHub</a>
+                    <a class="nav-link" href="${data[6]}"><span><i class="fas fa-rss-square"></i></span> Portfolio</a>
+                </div>
+            </div>
+            <main class="container" style="text-align: center;">
+                <h3>I built some things</h3>
+                <div class="row">
+                    <div class="col">
+                        <div class="card">
+                            <h3>Public Repos</h3>
+                            <p>${data[8]}</p>
+                        </div>
+                        <div class="card">
+                            <h3>Github Stars</h3>
+                            <p>${data[11]}</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <h3>Followers</h3>
+                            <p>${data[9]}</p>
+                        </div>
+                        <div class="card">
+                            <h3>Following</h3>
+                            <p>${data[10]}</p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+   
+        </body>
+      </html>`
+}
+module.exports = generateHTML;
