@@ -7,7 +7,7 @@ const fs = require("fs");
 
 
 
-const questions = [
+const qs = [
     {
         type: "input",
         name: "username",
@@ -22,7 +22,7 @@ const questions = [
 ];
 
 function askUser() {
-    return inquirer.prompt(questions);
+    return inquirer.prompt(qs);
 };
 askUser()
     .then(function (data) {
@@ -44,12 +44,9 @@ askUser()
                 const locUrl = `https://www.google.com/maps/place/${userLoc}`;
                 const gitPage = user.html_url;
                 const userBlog = user.blog;
-
-
                 const userBio = user.bio;
                 const repoNum = user.public_repos;
                 const followers = user.followers;
-
                 const following = user.following;
 
                 axios.get(reposUrl)
