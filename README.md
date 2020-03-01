@@ -17,7 +17,7 @@ This project was fun to work and at it is cool to be able to see how you can cre
 
 **GIF of the node.js command line working
 
-![](GIFs\Untitled_ Mar 1, 2020 1_18 PM.gif)
+
 
 
 **PDF of the final production
