@@ -22,7 +22,7 @@ This project was fun to work and at it is cool to be able to see how you can cre
 
 **PDF of the final production
 
-![](GIFs\Untitled_ Mar 1, 2020 1_18 PM.gif)
+
 
 **These items are also located in the GIF's drop down.
 
